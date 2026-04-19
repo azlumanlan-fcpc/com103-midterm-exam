@@ -49,3 +49,48 @@ for i in range(4):
     categories.append(cat_num)
     descriptions.append(desc)
     amounts.append(amount)
+    
+    print()
+    
+print("=" * 50)
+print(f"   {student_name.upper()} -- WEEKLY EXPENSE LOG")
+print("=" * 50)
+print(f"  Weekly Budget : P{weekly_budget:.2f}")
+
+category_names = [
+    "Foods & Drinks",
+    "Transportation",
+    "Mobile / Internet",
+    "School Supplies",
+    "Entertainment"
+    ]
+
+for i in range(len(amounts)):
+    cat_num = categories[i]
+    desc = descriptions[i]
+    amount = amounts[i] 
+    
+    total += amount
+    
+    print(f"  [{i+1}] {category_names[cat_num-1]}")
+    
+    if amount > limit:
+        print(f"     {desc.title():<30} P{amount:.2f}  ! High Expense Alert!")
+    else:
+        print(f"     {desc.title():<30} P{amount:.2f}")
+    
+remaining = weekly_budget - total
+
+if remaining >= 0:
+    status = "Budget OK! Keep it up."
+    
+elif remaining < 0:
+    status = "Overspent! Reduce spending."
+    
+else:
+    print("Invalid.")
+
+print("-" * 50)
+print(f"  Total Spent : P{total:.2f}")
+print(f"  Remaining   : P{remaining:.2f}")
+print(f"  Status      : {status}")
