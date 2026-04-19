@@ -1,1 +1,3 @@
 # com103-midterm-exam
+
+This program is designed to track weekly expenses. First, it asks your name and your weekly budget. Then it shows a category for different things that can be bought or that can be spent on using money. Second, it asks four of your expenses on that week requiring details such as a description of the object and the amount used for it. It is then totalized and the program determines the remaining balance you have. Lastly, it formulates a "Weekly Expense Log" wherein it shows the items that were bought, how much money was spent, and a reminder for either overspending or being a frugal person.
